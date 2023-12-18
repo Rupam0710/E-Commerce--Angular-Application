@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { homeCarouselData } from '../../../Data/mainCarousal';
+import { homeCarouselData } from '../../../../../../Data/mainCarousal';
 
 @Component({
   selector: 'app-main-carousel',

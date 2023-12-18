@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { menJeans } from '../../Data/Men/men_jeans';
-import { gounsPage1 } from '../../Data/Gouns/gouns';
-import { lengha_page1 } from '../../Data/Women/lenghaCholi';
-import { mens_kurta } from '../../Data/Men/men_kurta';
-import { mensShoesPage1 } from '../../Data/shoes';
+import { menJeans } from '../../../../../Data/Men/men_jeans';
+import { gounsPage1 } from '../../../../../Data/Gouns/gouns';
+import { lengha_page1 } from '../../../../../Data/Women/lenghaCholi';
+import { mens_kurta } from '../../../../../Data/Men/men_kurta';
+import { mensShoesPage1 } from '../../../../../Data/shoes';
+
 
 @Component({
   selector: 'app-home',
