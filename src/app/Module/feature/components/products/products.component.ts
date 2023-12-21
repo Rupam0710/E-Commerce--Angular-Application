@@ -55,4 +55,6 @@ export class ProductsComponent implements OnInit {
     console.log("query params", queryParams);
   }
 
+
+
 }
