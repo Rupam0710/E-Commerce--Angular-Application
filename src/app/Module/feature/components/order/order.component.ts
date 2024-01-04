@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class OrderComponent {
 
+  orderFilter = [
+    { value: "on_the_way", label: "On the Way" },
+    { value: "delivered", label: "Delivered" },
+    { value: "cancelled", label: "Cancelled" },
+    { value: "returned", label: "Returned" },
+  ]
+
+
+  orders = [[1, 1], [1, 1, 1]]
+
+  constructor(private router: Router) { }
+
+  navigateToOrderDetails(id: Number) {
+    this.router.navigate([`order/${id}`]);
+  }
 }

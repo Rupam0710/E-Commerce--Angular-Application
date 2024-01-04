@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,6 +12,8 @@ export class NavbarComponent {
   currentSection: any
   isNavbarContentOpen: any
 
+  constructor(private router: Router) { }
+
   public openNavbarContent(section: any) {
     this.isNavbarContentOpen = true;
     this.currentSection = section;
@@ -22,7 +25,7 @@ export class NavbarComponent {
   }
 
   public navigateTo(path: any) {
-
+    this.router.navigate([path]);
   }
 
   @HostListener('document:click', [`$event`])
