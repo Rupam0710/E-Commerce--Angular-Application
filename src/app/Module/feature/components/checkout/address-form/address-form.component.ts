@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-address-form',
@@ -11,7 +12,8 @@ export class AddressFormComponent {
 
   addresses = [1, 1, 1]
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute,
+    private toastr: ToastrService) { }
 
   myForm: FormGroup = this.formBuilder.group({
     firstName: ["", Validators.required],
@@ -30,11 +32,15 @@ export class AddressFormComponent {
 
     const formValue = this.myForm.value;
     console.log("form data", formValue);
-    // this.router.navigate(['payment/20'], { relativeTo: this.route })
+
 
   }
 
   onNavigate() {
-    this.router.navigate(['payment/20'], { relativeTo: this.route })
+    if (this.myForm.valid) {
+      this.router.navigate(['payment/20'], { relativeTo: this.route })
+    } else {
+      this.toastr.warning('Please fill in the shopping address to proceed to payment')
+    }
   }
 }

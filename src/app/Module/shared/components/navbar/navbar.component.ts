@@ -59,11 +59,11 @@ export class NavbarComponent {
   name: string;
 
   ngOnInit() {
-    this.name = this.readSessionStorageValue();
+    this.name = this.readLocalStorageValue();
   }
 
-  readSessionStorageValue() {
-    return sessionStorage.getItem('username');
+  readLocalStorageValue() {
+    return localStorage.getItem('username');
   }
 
   logOut() {

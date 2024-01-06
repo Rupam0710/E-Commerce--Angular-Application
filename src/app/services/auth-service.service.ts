@@ -36,7 +36,7 @@ export class AuthService {
   logout(): void {
 
     localStorage.removeItem('username');
-    localStorage.removeItem('userInfo');
+
 
     this.isAuthenticated = false;
   }

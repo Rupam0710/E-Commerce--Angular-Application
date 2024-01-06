@@ -38,7 +38,7 @@ export class SigninComponent {
 
         if (this.userdata) {
           this.toastr.success('You are successfully login')
-          sessionStorage.setItem("username", this.userdata.firstName)
+          localStorage.setItem("username", this.userdata.firstName)
           this.authService.login();
           this.dialog.closeAll();
 
