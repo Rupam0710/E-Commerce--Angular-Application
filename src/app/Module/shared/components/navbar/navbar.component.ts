@@ -1,6 +1,8 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { MatDialog } from '@angular/material/dialog';
+import { AuthComponent } from '../../../auth/auth.component';
+import { AuthService } from '../../../../services/auth-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +14,7 @@ export class NavbarComponent {
   currentSection: any
   isNavbarContentOpen: any
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private dialog: MatDialog, public authService: AuthService) { }
 
   public openNavbarContent(section: any) {
     this.isNavbarContentOpen = true;
@@ -44,5 +46,27 @@ export class NavbarComponent {
     if (modalContainer && !clickInsideButton && this.isNavbarContentOpen) {
       this.closeNavbarContent();
     }
+  }
+
+
+  handleOpenLoginModal() {
+    this.dialog.open(AuthComponent, {
+      width: "400px",
+      disableClose: false
+    })
+  }
+
+  name: string;
+
+  ngOnInit() {
+    this.name = this.readSessionStorageValue();
+  }
+
+  readSessionStorageValue() {
+    return sessionStorage.getItem('username');
+  }
+
+  logOut() {
+    this.authService.logout();
   }
 }

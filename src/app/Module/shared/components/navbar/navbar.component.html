@@ -41,13 +41,22 @@
         <mat-icon>shopping_cart</mat-icon>
       </button>
 
-      <button *ngIf="false" mat-raised-button type="" color="accent">
+      <button
+        (click)="handleOpenLoginModal()"
+        *ngIf="!authService.isLoggedIn()"
+        mat-raised-button
+        type=""
+        color="accent"
+      >
         Login
       </button>
 
-      <div *ngIf="true" class="relative ml-3 flex items-center">
+      <div
+        *ngIf="authService.isLoggedIn()"
+        class="relative ml-3 flex items-center"
+      >
         <div class="flex items-center space-x-5">
-          <span class="font-bold text-lg">Rupam</span>
+          <span class="font-bold text-lg">{{ readSessionStorageValue() }}</span>
           <button mat-button [matMenuTriggerFor]="profileMenu">
             <img
               class="h-6 w-6"
@@ -60,7 +69,7 @@
               Orders
             </button>
             <button mat-menu-item>Profile</button>
-            <button mat-menu-item>LogOut</button>
+            <button mat-menu-item (click)="logOut()">LogOut</button>
           </mat-menu>
         </div>
       </div>
