@@ -19,7 +19,7 @@ export class PaymentComponent {
       const RazorpayOptions = {
         description: 'Sample Razorpay demo',
         currency: 'INR',
-        amount: 600000,
+        amount: 1300000,
         name: 'Rupam',
         key: 'rzp_test_Pi6nQdsklmnC2h',
         image: 'https://marketplace.canva.com/EAFauoQSZtY/1/0/1600w/canva-brown-mascot-lion-free-logo-qJptouniZ0A.jpg',

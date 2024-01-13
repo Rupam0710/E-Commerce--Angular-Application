@@ -1,31 +1,44 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { AppModule } from './app.module';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [AppModule],
+      declarations: [AppComponent],
+    });
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'e-commerce'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('e-commerce');
+  it(`should have the title 'e-commerce'`, () => {
+    expect(component.title).toEqual('e-commerce');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, e-commerce');
+  it('should render app-navbar', () => {
+    const navbarElement = fixture.nativeElement.querySelector('app-navbar');
+    expect(navbarElement).toBeTruthy();
   });
+
+  it('should render router-outlet', () => {
+    const routerOutletElement = fixture.nativeElement.querySelector('router-outlet');
+    expect(routerOutletElement).toBeTruthy();
+  });
+
+  it('should render app-footer', () => {
+    const footerElement = fixture.nativeElement.querySelector('app-footer');
+    expect(footerElement).toBeTruthy();
+  });
+
+
+
 });

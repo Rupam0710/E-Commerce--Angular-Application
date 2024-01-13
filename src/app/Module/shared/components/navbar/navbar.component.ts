@@ -14,7 +14,7 @@ export class NavbarComponent {
   currentSection: any
   isNavbarContentOpen: any
 
-  constructor(private router: Router, private dialog: MatDialog, public authService: AuthService) { }
+  constructor(public router: Router, private dialog: MatDialog, public authService: AuthService) { }
 
   public openNavbarContent(section: any) {
     this.isNavbarContentOpen = true;

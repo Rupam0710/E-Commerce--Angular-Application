@@ -34,6 +34,13 @@
       "email": "lm@gmail.com",
       "password": "12345678",
       "id": 5
+    },
+    {
+      "firstName": "Luka",
+      "lastName": "Modric",
+      "email": "lm10@gmail.com",
+      "password": "12345678",
+      "id": 6
     }
   ]
 }
