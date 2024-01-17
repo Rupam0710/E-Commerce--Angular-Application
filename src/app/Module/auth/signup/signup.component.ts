@@ -26,7 +26,7 @@ export class SignupComponent {
   })
 
   signUser: any;
-  submitForm() {
+  public submitForm() {
     if (this.loginForm.valid) {
       this.signUser = this.loginForm.value.firstName;
       console.log("Register req data", this.loginForm.value);

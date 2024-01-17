@@ -26,7 +26,7 @@ export class SigninComponent {
 
   userdata: any;
 
-  submitForm() {
+  public submitForm() {
     if (this.loginForm.valid) {
       console.log("login req data", this.loginForm.value);
 

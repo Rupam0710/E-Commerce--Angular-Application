@@ -20,7 +20,7 @@ export class OrderComponent {
 
   constructor(private router: Router) { }
 
-  navigateToOrderDetails(id: Number) {
+  public navigateToOrderDetails(id: Number) {
     this.router.navigate([`order/${id}`]);
   }
 }

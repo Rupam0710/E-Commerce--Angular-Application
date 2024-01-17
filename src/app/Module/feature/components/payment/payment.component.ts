@@ -13,13 +13,13 @@ export class PaymentComponent {
   products = [1, 1, 1]
 
   constructor(private toastr: ToastrService, private authService: AuthService) { }
-  payNow() {
+  public payNow() {
 
     if (this.authService.isLoggedIn()) {
       const RazorpayOptions = {
         description: 'Sample Razorpay demo',
         currency: 'INR',
-        amount: 1300000,
+        amount: 600000,
         name: 'Rupam',
         key: 'rzp_test_Pi6nQdsklmnC2h',
         image: 'https://marketplace.canva.com/EAFauoQSZtY/1/0/1600w/canva-brown-mascot-lion-free-logo-qJptouniZ0A.jpg',

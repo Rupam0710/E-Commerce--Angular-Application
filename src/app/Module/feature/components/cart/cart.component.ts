@@ -11,7 +11,7 @@ export class CartComponent {
   cart = [1, 1, 1];
 
   constructor(private router: Router) { }
-  navigateToCheckout() {
+  public navigateToCheckout() {
     this.router.navigate(["checkout"])
   }
 }

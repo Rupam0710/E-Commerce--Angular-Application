@@ -12,21 +12,21 @@ export class AuthService {
 
   private apiUrl = BASE_API_URL + '/auth';
 
-  ProceedRegister(inputdata: any) {
+  public ProceedRegister(inputdata: any) {
     return this.http.post(this.apiUrl, inputdata);
   }
 
-  GetUsersData() {
+  public GetUsersData() {
     return this.http.get<any>(this.apiUrl)
   }
 
   private isAuthenticated: boolean = false;
 
-  isLoggedIn(): boolean {
+  public isLoggedIn(): boolean {
     return this.isAuthenticated;
   }
 
-  login(): void {
+  public login(): void {
 
     this.isAuthenticated = true;
 

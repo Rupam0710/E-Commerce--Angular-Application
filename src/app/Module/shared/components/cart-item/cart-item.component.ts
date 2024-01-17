@@ -9,12 +9,12 @@ export class CartItemComponent {
 
   @Input() showButton: any;
 
-  updateCartItem(num: Number) {
+  public updateCartItem(num: Number) {
     console.log("num", num);
 
   }
 
-  removeCartItem() {
+  public removeCartItem() {
     console.log("remove cart item");
 
   }

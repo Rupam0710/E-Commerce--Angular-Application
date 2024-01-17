@@ -18,7 +18,7 @@ export class StarRatingComponent {
     this.currentRating = this.initialRating;
   }
 
-  rate(rating: number) {
+  public rate(rating: number) {
     this.currentRating = rating;
   }
 }

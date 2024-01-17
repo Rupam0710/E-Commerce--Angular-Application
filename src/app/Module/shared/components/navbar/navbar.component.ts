@@ -49,7 +49,7 @@ export class NavbarComponent {
   }
 
 
-  handleOpenLoginModal() {
+  public handleOpenLoginModal() {
     this.dialog.open(AuthComponent, {
       width: "400px",
       disableClose: false
@@ -62,11 +62,11 @@ export class NavbarComponent {
     this.name = this.readLocalStorageValue();
   }
 
-  readLocalStorageValue() {
+  public readLocalStorageValue() {
     return localStorage.getItem('username');
   }
 
-  logOut() {
+  public logOut() {
     this.authService.logout();
   }
 }

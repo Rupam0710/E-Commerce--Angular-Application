@@ -41,6 +41,48 @@
       "email": "lm10@gmail.com",
       "password": "12345678",
       "id": 6
+    },
+    {
+      "firstName": "Gareth",
+      "lastName": "Bale",
+      "email": "gb@gmail.com",
+      "password": "12345678",
+      "id": 7
+    },
+    {
+      "firstName": "Toni",
+      "lastName": "Kroos",
+      "email": "tk@gmail.com",
+      "password": "12345678",
+      "id": 8
+    },
+    {
+      "firstName": "Rohan",
+      "lastName": "N",
+      "email": "rn@gmail.com",
+      "password": "12345678",
+      "id": 9
+    },
+    {
+      "firstName": "Carlo",
+      "lastName": "Ancelloti",
+      "email": "ca@gmail.com",
+      "password": "12345678",
+      "id": 10
+    },
+    {
+      "firstName": "James",
+      "lastName": "Rodriguez",
+      "email": "jr@gmail.com",
+      "password": "12345678",
+      "id": 11
+    },
+    {
+      "firstName": "Cristiano",
+      "lastName": "Ronadlo",
+      "email": "cr@gmail.com",
+      "password": "12345678",
+      "id": 12
     }
   ]
 }

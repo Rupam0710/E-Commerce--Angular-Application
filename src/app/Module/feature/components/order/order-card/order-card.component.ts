@@ -10,7 +10,7 @@ export class OrderCardComponent {
 
   constructor(private router: Router) { }
 
-  navigateToOrderDetails(id: Number) {
+  public navigateToOrderDetails(id: Number) {
     this.router.navigate([`orders/${id}`]);
   }
 }

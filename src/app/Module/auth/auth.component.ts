@@ -9,7 +9,7 @@ export class AuthComponent {
 
   isLoggedIn = true;
 
-  changeTemplate = () => {
+  public changeTemplate = () => {
     this.isLoggedIn = !this.isLoggedIn;
   }
 }

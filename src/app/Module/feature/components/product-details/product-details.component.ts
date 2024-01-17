@@ -17,7 +17,7 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.relatedProducts = mens_kurta;
   }
-  handleAddToCart() {
+  public handleAddToCart() {
     console.log("selected size", this.selectedSize);
     this.router.navigate(['cart'])
 

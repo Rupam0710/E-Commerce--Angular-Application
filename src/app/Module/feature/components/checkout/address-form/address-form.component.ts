@@ -26,9 +26,9 @@ export class AddressFormComponent {
   })
 
 
-  handleCreateOrder(item: any) { }
+  public handleCreateOrder(item: any) { }
 
-  handleSubmit() {
+  public handleSubmit() {
 
     const formValue = this.myForm.value;
     console.log("form data", formValue);
@@ -36,7 +36,7 @@ export class AddressFormComponent {
 
   }
 
-  onNavigate() {
+  public onNavigate() {
     if (this.myForm.valid) {
       this.router.navigate(['payment/20'], { relativeTo: this.route })
     } else {
